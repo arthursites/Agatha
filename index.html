@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Primeiro Mês 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="hearts"></div>
+
+    <main class="container">
+
+        <!-- INÍCIO -->
+        <section id="intro" class="screen active">
+            <div class="card intro-card">
+                <div class="heart">❤️</div>
+
+                <p class="small-title">PARA O MEU AMOR</p>
+
+                <h1>Nosso primeiro mês 💗</h1>
+
+                <p class="intro-text">
+                    Um mês pode parecer pouco para algumas pessoas...
+                    mas para mim já foi suficiente para criar momentos
+                    que eu quero guardar para sempre.
+                </p>
+
+                <p class="intro-text">
+                    Então preparei algumas perguntinhas para você. 🥰
+                </p>
+
+                <button id="startBtn" class="primary-btn">
+                    Começar o questionário 💕
+                </button>
+            </div>
+        </section>
+
+        <!-- QUESTIONÁRIO -->
+        <section id="quiz" class="screen">
+
+            <div class="quiz-header">
+                <span id="questionNumber">1 de 10</span>
+
+                <div class="progress-container">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            <form id="quizForm">
+
+                <!-- PERGUNTA 1 -->
+                <div class="question active-question" data-question="1">
+                    <div class="card">
+                        <span class="question-icon">💭</span>
+
+                        <h2>Qual foi sua primeira impressão de mim?</h2>
+
+                        <textarea
+                            name="primeira_impressao"
+                            placeholder="Conta para mim... 👀"
+                            required
+                        ></textarea>
+
+                        <button type="button" class="next-btn">
+                            Próxima 💗
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 2 -->
+                <div class="question" data-question="2">
+                    <div class="card">
+                        <span class="question-icon">🥰</span>
+
+                        <h2>Qual foi seu momento favorito desse primeiro mês?</h2>
+
+                        <textarea
+                            name="momento_favorito"
+                            placeholder="Quero saber qual foi..."
+                            required
+                        ></textarea>
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 3 -->
+                <div class="question" data-question="3">
+                    <div class="card">
+                        <span class="question-icon">❤️</span>
+
+                        <h2>O que você mais gosta em mim?</h2>
+
+                        <textarea
+                            name="o_que_mais_gosta"
+                            placeholder="Pode ser qualquer coisa... ❤️"
+                            required
+                        ></textarea>
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 4 -->
+                <div class="question" data-question="4">
+                    <div class="card">
+                        <span class="question-icon">😘</span>
+
+                        <h2>Qual apelido você mais gosta que eu te chame?</h2>
+
+                        <input
+                            type="text"
+                            name="apelido"
+                            placeholder="Meu amor, princesa, linda..."
+                            required
+                        >
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 5 -->
+                <div class="question" data-question="5">
+                    <div class="card">
+                        <span class="question-icon">🎵</span>
+
+                        <h2>Qual música lembra nós dois?</h2>
+
+                        <input
+                            type="text"
+                            name="musica"
+                            placeholder="Nome da música ou artista..."
+                            required
+                        >
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 6 -->
+                <div class="question" data-question="6">
+                    <div class="card">
+                        <span class="question-icon">🌎</span>
+
+                        <h2>Qual lugar você gostaria de conhecer comigo?</h2>
+
+                        <input
+                            type="text"
+                            name="lugar"
+                            placeholder="Um lugar especial..."
+                            required
+                        >
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 7 -->
+                <div class="question" data-question="7">
+                    <div class="card">
+                        <span class="question-icon">💘</span>
+
+                        <h2>De 0 a 10, quanto você está gostando desse nosso primeiro mês?</h2>
+
+                        <div class="rating">
+                            <label>
+                                <input type="radio" name="nota" value="0" required>
+                                <span>0</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="1">
+                                <span>1</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="2">
+                                <span>2</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="3">
+                                <span>3</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="4">
+                                <span>4</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="5">
+                                <span>5</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="6">
+                                <span>6</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="7">
+                                <span>7</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="8">
+                                <span>8</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="9">
+                                <span>9</span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="nota" value="10">
+                                <span>10</span>
+                            </label>
+                        </div>
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 8 -->
+                <div class="question" data-question="8">
+                    <div class="card">
+                        <span class="question-icon">✨</span>
+
+                        <h2>O que você gostaria que a gente fizesse juntos?</h2>
+
+                        <textarea
+                            name="futuro"
+                            placeholder="Um encontro, uma viagem, alguma aventura..."
+                            required
+                        ></textarea>
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 9 -->
+                <div class="question" data-question="9">
+                    <div class="card">
+                        <span class="question-icon">💕</span>
+
+                        <h2>Complete a frase:</h2>
+
+                        <p class="phrase">
+                            "Eu gosto de você porque..."
+                        </p>
+
+                        <textarea
+                            name="porque_gosta"
+                            placeholder="Escreve do seu jeitinho..."
+                            required
+                        ></textarea>
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+                            <button type="button" class="next-btn">Próxima 💗</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGUNTA 10 -->
+                <div class="question" data-question="10">
+                    <div class="card">
+                        <span class="question-icon">💌</span>
+
+                        <h2>Deixe uma mensagem para mim</h2>
+
+                        <textarea
+                            name="mensagem"
+                            placeholder="Escreve tudo que quiser... ❤️"
+                            required
+                        ></textarea>
+
+                        <div class="buttons">
+                            <button type="button" class="back-btn">Voltar</button>
+
+                            <button type="submit" class="submit-btn">
+                                Enviar respostas ❤️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- FINAL -->
+        <section id="success" class="screen">
+
+            <div class="card success-card">
+
+                <div class="big-heart">💗</div>
+
+                <h1>Obrigado, meu amor!</h1>
+
+                <p>
+                    Suas respostas foram enviadas. 🥰
+                </p>
+
+                <p>
+                    Esse foi apenas o nosso primeiro mês...
+                    ainda temos muitos momentos para viver,
+                    muitas histórias para criar e muito amor
+                    para compartilhar.
+                </p>
+
+                <div class="final-message">
+                    Eu te amo. ❤️
+                </div>
+
+                <div class="floating-hearts">
+                    💕 💗 💕
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
