@@ -14,388 +14,798 @@
 
 body {
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     color: var(--text);
 
     background:
-        radial-gradient(circle at top left, #ffd6e3, transparent 35%),
-        radial-gradient(circle at bottom right, #ffc3d5, transparent 35%),
-        linear-gradient(135deg, #fff0f5, #ffdce7);
+        radial-gradient(
+            circle at top left,
+            #ffd6e3,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #ffc3d5,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #ffdce7
+        );
 
     overflow-x: hidden;
 }
 
-/* CORAÇÕES DE FUNDO */
+
+/* =========================
+   CORAÇÕES DE FUNDO
+========================= */
 
 .hearts::before,
 .hearts::after {
-    content: "❤  ♥  ♡  💕  ❤  ♡";
+
+    content:
+        "❤  ♥  ♡  💕  ❤  ♡";
+
     position: fixed;
+
     width: 100%;
-    color: rgba(255, 79, 129, 0.12);
+
+    color:
+        rgba(
+            255,
+            79,
+            129,
+            0.12
+        );
+
     font-size: 35px;
+
     letter-spacing: 40px;
+
     pointer-events: none;
+
     z-index: -1;
 }
 
 .hearts::before {
+
     top: 10%;
     left: -50px;
-    transform: rotate(-10deg);
+
+    transform:
+        rotate(-10deg);
 }
 
 .hearts::after {
+
     bottom: 10%;
     right: -50px;
-    transform: rotate(10deg);
+
+    transform:
+        rotate(10deg);
 }
 
-/* CONTAINER */
+
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
+
     width: 100%;
+
     max-width: 750px;
+
     margin: auto;
+
     padding: 25px 18px;
+
     min-height: 100vh;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
-/* TELAS */
+
+/* =========================
+   TELAS
+========================= */
 
 .screen {
+
     display: none;
+
     width: 100%;
-    animation: fadeIn 0.5s ease;
+
+    animation:
+        fadeIn 0.5s ease;
 }
 
 .screen.active {
+
     display: block;
 }
 
+
 @keyframes fadeIn {
+
     from {
+
         opacity: 0;
-        transform: translateY(15px);
+
+        transform:
+            translateY(15px);
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
-/* CARD */
+
+/* =========================
+   CARD
+========================= */
 
 .card {
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 28px;
-    padding: 40px;
-    box-shadow:
-        0 20px 60px rgba(143, 39, 72, 0.15),
-        0 5px 20px rgba(143, 39, 72, 0.08);
 
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    border-radius: 28px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            143,
+            39,
+            72,
+            0.15
+        ),
+
+        0 5px 20px
+        rgba(
+            143,
+            39,
+            72,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
 }
 
-/* INTRO */
+
+/* =========================
+   FOTO DELA
+========================= */
+
+.photo-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+
+.girlfriend-photo {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        6px solid
+        white;
+
+    box-shadow:
+
+        0 8px 30px
+        rgba(
+            233,
+            54,
+            104,
+            0.28
+        );
+
+    animation:
+        photoAppear 0.8s ease;
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.7);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================
+   INTRO
+========================= */
 
 .intro-card {
+
     text-align: center;
 }
 
-.heart {
-    font-size: 70px;
-    animation: heartbeat 1.4s infinite;
-    margin-bottom: 15px;
-}
-
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.18);
-    }
-}
 
 .small-title {
+
     font-size: 12px;
+
     font-weight: bold;
+
     letter-spacing: 4px;
-    color: var(--pink);
+
+    color:
+        var(--pink);
+
     margin-bottom: 12px;
 }
 
+
 h1 {
+
     font-size: 42px;
+
     margin-bottom: 20px;
 }
 
+
 .intro-text {
+
     line-height: 1.7;
+
     font-size: 17px;
+
     margin-bottom: 15px;
 }
 
-/* BOTÕES */
+
+/* =========================
+   BOTÕES
+========================= */
 
 button {
+
     border: none;
+
     cursor: pointer;
+
     font-family: inherit;
 }
+
 
 .primary-btn,
 .submit-btn,
 .next-btn {
-    background: linear-gradient(135deg, var(--pink), var(--dark-pink));
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--dark-pink)
+        );
+
     color: white;
+
     font-weight: bold;
+
     border-radius: 50px;
+
     padding: 15px 25px;
+
     font-size: 15px;
+
     transition: 0.25s;
 }
 
+
 .primary-btn {
+
     margin-top: 15px;
 }
+
 
 .primary-btn:hover,
 .submit-btn:hover,
 .next-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(233, 54, 104, 0.3);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(
+            233,
+            54,
+            104,
+            0.3
+        );
 }
 
+
 .back-btn {
-    background: #ffe8ef;
-    color: var(--dark-pink);
+
+    background:
+        #ffe8ef;
+
+    color:
+        var(--dark-pink);
+
     font-weight: bold;
+
     border-radius: 50px;
+
     padding: 15px 25px;
+
     font-size: 15px;
 }
 
+
 .buttons {
+
     display: flex;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
+
     gap: 12px;
+
     margin-top: 25px;
 }
 
-/* HEADER DO QUIZ */
+
+/* =========================
+   HEADER DO QUIZ
+========================= */
 
 .quiz-header {
+
     margin-bottom: 18px;
 }
 
+
 #questionNumber {
+
     display: block;
+
     text-align: center;
+
     font-size: 14px;
+
     font-weight: bold;
-    color: var(--dark-pink);
+
+    color:
+        var(--dark-pink);
+
     margin-bottom: 8px;
 }
 
+
 .progress-container {
+
     width: 100%;
+
     height: 8px;
-    background: rgba(255, 255, 255, 0.7);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
     border-radius: 10px;
+
     overflow: hidden;
 }
 
+
 #progressBar {
+
     height: 100%;
+
     width: 10%;
-    background: linear-gradient(90deg, var(--pink), #ff9fba);
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            #ff9fba
+        );
+
     border-radius: 10px;
-    transition: width 0.4s ease;
+
+    transition:
+        width 0.4s ease;
 }
 
-/* PERGUNTAS */
+
+/* =========================
+   PERGUNTAS
+========================= */
 
 .question {
+
     display: none;
 }
 
+
 .question.active-question {
+
     display: block;
-    animation: questionIn 0.35s ease;
+
+    animation:
+        questionIn 0.35s ease;
 }
 
+
 @keyframes questionIn {
+
     from {
+
         opacity: 0;
-        transform: translateX(20px);
+
+        transform:
+            translateX(20px);
     }
 
     to {
+
         opacity: 1;
-        transform: translateX(0);
+
+        transform:
+            translateX(0);
     }
 }
 
+
 .question-icon {
+
     font-size: 38px;
+
     display: block;
+
     margin-bottom: 15px;
 }
 
+
 h2 {
+
     font-size: 25px;
+
     line-height: 1.35;
+
     margin-bottom: 25px;
 }
 
+
 textarea,
 input[type="text"] {
+
     width: 100%;
-    border: 2px solid #f5cfda;
-    background: #fff9fb;
-    color: var(--text);
+
+    border:
+        2px solid
+        #f5cfda;
+
+    background:
+        #fff9fb;
+
+    color:
+        var(--text);
+
     border-radius: 16px;
+
     padding: 16px;
+
     font-size: 16px;
+
     outline: none;
+
     font-family: inherit;
+
     transition: 0.2s;
 }
 
+
 textarea {
+
     min-height: 150px;
+
     resize: vertical;
 }
 
+
 textarea:focus,
 input[type="text"]:focus {
-    border-color: var(--pink);
-    box-shadow: 0 0 0 4px rgba(255, 79, 129, 0.08);
+
+    border-color:
+        var(--pink);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(
+            255,
+            79,
+            129,
+            0.08
+        );
 }
 
+
 .phrase {
-    background: var(--light-pink);
+
+    background:
+        var(--light-pink);
+
     padding: 15px;
+
     border-radius: 14px;
+
     font-weight: bold;
-    color: var(--dark-pink);
+
+    color:
+        var(--dark-pink);
+
     margin-bottom: 15px;
 }
 
-/* NOTA */
+
+/* =========================
+   NOTA
+========================= */
 
 .rating {
+
     display: flex;
+
     flex-wrap: wrap;
-    justify-content: center;
+
+    justify-content:
+        center;
+
     gap: 8px;
+
     margin: 25px 0;
 }
 
+
 .rating label {
+
     cursor: pointer;
 }
 
+
 .rating input {
+
     display: none;
 }
 
+
 .rating span {
+
     width: 45px;
+
     height: 45px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     border-radius: 50%;
-    background: #ffe8ef;
-    color: var(--dark-pink);
+
+    background:
+        #ffe8ef;
+
+    color:
+        var(--dark-pink);
+
     font-weight: bold;
+
     transition: 0.2s;
 }
 
+
 .rating input:checked + span {
-    background: var(--pink);
+
+    background:
+        var(--pink);
+
     color: white;
-    transform: scale(1.12);
+
+    transform:
+        scale(1.12);
 }
 
-/* FINAL */
+
+/* =========================
+   FINAL
+========================= */
 
 .success-card {
+
     text-align: center;
 }
 
+
 .big-heart {
+
     font-size: 85px;
-    animation: heartbeat 1.4s infinite;
+
+    animation:
+        heartbeat 1.4s infinite;
+
     margin-bottom: 15px;
 }
 
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.18);
+    }
+}
+
+
 .success-card p {
+
     line-height: 1.7;
+
     font-size: 17px;
+
     margin: 15px 0;
 }
 
+
 .final-message {
+
     margin-top: 25px;
+
     font-size: 28px;
+
     font-weight: bold;
-    color: var(--pink);
+
+    color:
+        var(--pink);
 }
 
+
 .floating-hearts {
+
     font-size: 25px;
+
     margin-top: 25px;
+
     letter-spacing: 10px;
 }
 
-/* CELULAR */
+
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 600px) {
 
     .container {
+
         padding: 15px;
     }
 
+
     .card {
+
         padding: 28px 20px;
+
         border-radius: 23px;
     }
 
+
     h1 {
+
         font-size: 32px;
     }
 
+
     h2 {
+
         font-size: 22px;
     }
 
+
     .intro-text {
+
         font-size: 15px;
     }
 
-    .heart {
-        font-size: 60px;
+
+    .girlfriend-photo {
+
+        width: 150px;
+
+        height: 150px;
     }
+
 
     .buttons {
-        flex-direction: column-reverse;
+
+        flex-direction:
+            column-reverse;
     }
 
+
     .buttons button {
+
         width: 100%;
     }
 
+
     .rating span {
+
         width: 40px;
+
         height: 40px;
     }
+
 }
