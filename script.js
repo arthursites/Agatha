@@ -40,7 +40,7 @@ let currentQuestion = 0;
 
 
 // ======================================================
-// INICIAR QUESTIONÁRIO
+// INICIAR
 // ======================================================
 
 startBtn.addEventListener("click", () => {
@@ -168,7 +168,7 @@ function validateCurrentQuestion() {
 
 
 // ======================================================
-// BOTÕES PRÓXIMA
+// PRÓXIMA PERGUNTA
 // ======================================================
 
 document
@@ -202,7 +202,7 @@ document
 
 
 // ======================================================
-// BOTÕES VOLTAR
+// VOLTAR
 // ======================================================
 
 document
@@ -228,7 +228,7 @@ document
 
 
 // ======================================================
-// ENVIAR RESPOSTAS
+// ENVIAR
 // ======================================================
 
 quizForm.addEventListener(
@@ -238,7 +238,6 @@ quizForm.addEventListener(
         event.preventDefault();
 
 
-        // Valida a última pergunta
         if (!validateCurrentQuestion()) {
             return;
         }
@@ -256,12 +255,10 @@ quizForm.addEventListener(
             "Enviando... 💌";
 
 
-        // Pega todas as respostas
         const formData =
             new FormData(quizForm);
 
 
-        // FormSubmit
         const url =
             `https://formsubmit.co/${EMAIL_DESTINO}`;
 
@@ -294,13 +291,13 @@ quizForm.addEventListener(
             }
 
 
-            // Esconde questionário
+            // Esconde o questionário
             quiz.classList.remove(
                 "active"
             );
 
 
-            // Mostra tela final
+            // Mostra a carta
             success.classList.add(
                 "active"
             );
