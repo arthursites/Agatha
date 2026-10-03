@@ -14,30 +14,13 @@
 
 body {
     min-height: 100vh;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
 
     background:
-        radial-gradient(
-            circle at top left,
-            #ffd6e3,
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at bottom right,
-            #ffc3d5,
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #fff0f5,
-            #ffdce7
-        );
+        radial-gradient(circle at top left, #ffd6e3, transparent 35%),
+        radial-gradient(circle at bottom right, #ffc3d5, transparent 35%),
+        linear-gradient(135deg, #fff0f5, #ffdce7);
 
     overflow-x: hidden;
 }
@@ -50,20 +33,13 @@ body {
 .hearts::before,
 .hearts::after {
 
-    content:
-        "❤  ♥  ♡  💕  ❤  ♡";
+    content: "❤  ♥  ♡  💕  ❤  ♡";
 
     position: fixed;
 
     width: 100%;
 
-    color:
-        rgba(
-            255,
-            79,
-            129,
-            0.12
-        );
+    color: rgba(255, 79, 129, 0.12);
 
     font-size: 35px;
 
@@ -79,8 +55,7 @@ body {
     top: 10%;
     left: -50px;
 
-    transform:
-        rotate(-10deg);
+    transform: rotate(-10deg);
 }
 
 .hearts::after {
@@ -88,8 +63,7 @@ body {
     bottom: 10%;
     right: -50px;
 
-    transform:
-        rotate(10deg);
+    transform: rotate(10deg);
 }
 
 
@@ -127,12 +101,10 @@ body {
 
     width: 100%;
 
-    animation:
-        fadeIn 0.5s ease;
+    animation: fadeIn 0.5s ease;
 }
 
 .screen.active {
-
     display: block;
 }
 
@@ -143,16 +115,14 @@ body {
 
         opacity: 0;
 
-        transform:
-            translateY(15px);
+        transform: translateY(15px);
     }
 
     to {
 
         opacity: 1;
 
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -163,48 +133,22 @@ body {
 
 .card {
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.92
-        );
+    background: rgba(255, 255, 255, 0.92);
 
     border-radius: 28px;
 
     padding: 40px;
 
     box-shadow:
-        0 20px 60px
-        rgba(
-            143,
-            39,
-            72,
-            0.15
-        ),
+        0 20px 60px rgba(143, 39, 72, 0.15),
+        0 5px 20px rgba(143, 39, 72, 0.08);
 
-        0 5px 20px
-        rgba(
-            143,
-            39,
-            72,
-            0.08
-        );
-
-    border:
-        1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.8
-        );
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 
 /* =========================
-   FOTO DELA
+   FOTO
 ========================= */
 
 .photo-container {
@@ -227,22 +171,12 @@ body {
 
     border-radius: 50%;
 
-    border:
-        6px solid
-        white;
+    border: 6px solid white;
 
     box-shadow:
+        0 8px 30px rgba(233, 54, 104, 0.28);
 
-        0 8px 30px
-        rgba(
-            233,
-            54,
-            104,
-            0.28
-        );
-
-    animation:
-        photoAppear 0.8s ease;
+    animation: photoAppear 0.8s ease;
 }
 
 
@@ -252,16 +186,14 @@ body {
 
         opacity: 0;
 
-        transform:
-            scale(0.7);
+        transform: scale(0.7);
     }
 
     to {
 
         opacity: 1;
 
-        transform:
-            scale(1);
+        transform: scale(1);
     }
 }
 
@@ -271,7 +203,6 @@ body {
 ========================= */
 
 .intro-card {
-
     text-align: center;
 }
 
@@ -284,8 +215,7 @@ body {
 
     letter-spacing: 4px;
 
-    color:
-        var(--pink);
+    color: var(--pink);
 
     margin-bottom: 12px;
 }
@@ -349,7 +279,6 @@ button {
 
 
 .primary-btn {
-
     margin-top: 15px;
 }
 
@@ -358,28 +287,18 @@ button {
 .submit-btn:hover,
 .next-btn:hover {
 
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
     box-shadow:
-
-        0 8px 20px
-        rgba(
-            233,
-            54,
-            104,
-            0.3
-        );
+        0 8px 20px rgba(233, 54, 104, 0.3);
 }
 
 
 .back-btn {
 
-    background:
-        #ffe8ef;
+    background: #ffe8ef;
 
-    color:
-        var(--dark-pink);
+    color: var(--dark-pink);
 
     font-weight: bold;
 
@@ -395,8 +314,7 @@ button {
 
     display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
     gap: 12px;
 
@@ -405,11 +323,10 @@ button {
 
 
 /* =========================
-   HEADER DO QUIZ
+   PROGRESSO
 ========================= */
 
 .quiz-header {
-
     margin-bottom: 18px;
 }
 
@@ -424,8 +341,7 @@ button {
 
     font-weight: bold;
 
-    color:
-        var(--dark-pink);
+    color: var(--dark-pink);
 
     margin-bottom: 8px;
 }
@@ -437,13 +353,7 @@ button {
 
     height: 8px;
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            0.7
-        );
+    background: rgba(255, 255, 255, 0.7);
 
     border-radius: 10px;
 
@@ -466,8 +376,7 @@ button {
 
     border-radius: 10px;
 
-    transition:
-        width 0.4s ease;
+    transition: width 0.4s ease;
 }
 
 
@@ -476,7 +385,6 @@ button {
 ========================= */
 
 .question {
-
     display: none;
 }
 
@@ -485,8 +393,7 @@ button {
 
     display: block;
 
-    animation:
-        questionIn 0.35s ease;
+    animation: questionIn 0.35s ease;
 }
 
 
@@ -496,16 +403,14 @@ button {
 
         opacity: 0;
 
-        transform:
-            translateX(20px);
+        transform: translateX(20px);
     }
 
     to {
 
         opacity: 1;
 
-        transform:
-            translateX(0);
+        transform: translateX(0);
     }
 }
 
@@ -535,15 +440,11 @@ input[type="text"] {
 
     width: 100%;
 
-    border:
-        2px solid
-        #f5cfda;
+    border: 2px solid #f5cfda;
 
-    background:
-        #fff9fb;
+    background: #fff9fb;
 
-    color:
-        var(--text);
+    color: var(--text);
 
     border-radius: 16px;
 
@@ -570,24 +471,16 @@ textarea {
 textarea:focus,
 input[type="text"]:focus {
 
-    border-color:
-        var(--pink);
+    border-color: var(--pink);
 
     box-shadow:
-        0 0 0 4px
-        rgba(
-            255,
-            79,
-            129,
-            0.08
-        );
+        0 0 0 4px rgba(255, 79, 129, 0.08);
 }
 
 
 .phrase {
 
-    background:
-        var(--light-pink);
+    background: var(--light-pink);
 
     padding: 15px;
 
@@ -595,8 +488,7 @@ input[type="text"]:focus {
 
     font-weight: bold;
 
-    color:
-        var(--dark-pink);
+    color: var(--dark-pink);
 
     margin-bottom: 15px;
 }
@@ -612,8 +504,7 @@ input[type="text"]:focus {
 
     flex-wrap: wrap;
 
-    justify-content:
-        center;
+    justify-content: center;
 
     gap: 8px;
 
@@ -622,13 +513,11 @@ input[type="text"]:focus {
 
 
 .rating label {
-
     cursor: pointer;
 }
 
 
 .rating input {
-
     display: none;
 }
 
@@ -647,11 +536,9 @@ input[type="text"]:focus {
 
     border-radius: 50%;
 
-    background:
-        #ffe8ef;
+    background: #ffe8ef;
 
-    color:
-        var(--dark-pink);
+    color: var(--dark-pink);
 
     font-weight: bold;
 
@@ -661,74 +548,136 @@ input[type="text"]:focus {
 
 .rating input:checked + span {
 
-    background:
-        var(--pink);
+    background: var(--pink);
 
     color: white;
 
-    transform:
-        scale(1.12);
+    transform: scale(1.12);
 }
 
 
 /* =========================
-   FINAL
+   CARTA FINAL
 ========================= */
 
-.success-card {
-
+.letter-card {
     text-align: center;
 }
 
 
-.big-heart {
+.letter-photo-container {
 
-    font-size: 85px;
+    display: flex;
 
-    animation:
-        heartbeat 1.4s infinite;
+    justify-content: center;
 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 
-@keyframes heartbeat {
+.letter-photo {
 
-    0%,
-    100% {
+    width: 150px;
 
-        transform:
-            scale(1);
-    }
+    height: 150px;
 
-    50% {
+    object-fit: cover;
 
-        transform:
-            scale(1.18);
-    }
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 8px 30px rgba(233, 54, 104, 0.25);
 }
 
 
-.success-card p {
+.letter-small-title {
 
-    line-height: 1.7;
-
-    font-size: 17px;
-
-    margin: 15px 0;
-}
-
-
-.final-message {
-
-    margin-top: 25px;
-
-    font-size: 28px;
+    font-size: 12px;
 
     font-weight: bold;
 
-    color:
-        var(--pink);
+    letter-spacing: 3px;
+
+    color: var(--pink);
+
+    margin-bottom: 10px;
+}
+
+
+.letter-card h1 {
+    font-size: 36px;
+}
+
+
+.letter {
+
+    margin-top: 30px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fa,
+            #fff0f5
+        );
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    border-left:
+        4px solid var(--pink);
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(255, 79, 129, 0.04);
+}
+
+
+.letter p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.letter p:first-child {
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: var(--dark-pink);
+}
+
+
+.letter-love {
+
+    text-align: center;
+
+    font-size: 30px !important;
+
+    font-weight: bold;
+
+    color: var(--pink);
+
+    margin-top: 30px;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-family: Georgia, serif;
+
+    color: #7d4055;
 }
 
 
@@ -739,6 +688,22 @@ input[type="text"]:focus {
     margin-top: 25px;
 
     letter-spacing: 10px;
+
+    animation:
+        floatingHearts 2s ease-in-out infinite;
+}
+
+
+@keyframes floatingHearts {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
 }
 
 
@@ -749,7 +714,6 @@ input[type="text"]:focus {
 @media (max-width: 600px) {
 
     .container {
-
         padding: 15px;
     }
 
@@ -763,19 +727,16 @@ input[type="text"]:focus {
 
 
     h1 {
-
         font-size: 32px;
     }
 
 
     h2 {
-
         font-size: 22px;
     }
 
 
     .intro-text {
-
         font-size: 15px;
     }
 
@@ -796,7 +757,6 @@ input[type="text"]:focus {
 
 
     .buttons button {
-
         width: 100%;
     }
 
@@ -806,6 +766,33 @@ input[type="text"]:focus {
         width: 40px;
 
         height: 40px;
+    }
+
+
+    .letter-card h1 {
+        font-size: 29px;
+    }
+
+
+    .letter {
+
+        padding: 22px;
+    }
+
+
+    .letter p {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .letter-photo {
+
+        width: 125px;
+
+        height: 125px;
     }
 
 }
