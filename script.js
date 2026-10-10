@@ -3,7 +3,7 @@
 // ======================================================
 
 // COLOQUE SEU E-MAIL AQUI
-const EMAIL_DESTINO = "mariacardoso3334@gmail.com";
+const EMAIL_DESTINO = "arthurtrabalhossitesetc@gmail.com";
 
 
 // ======================================================
